@@ -1,0 +1,247 @@
+  <!DOCTYPE html>
+  <html lang="de">
+    <head>
+      <meta name="generator" content="Primo" />
+      <!-- HEAD_svelte-1vsfxrb_START --><style>/* Reset & standardize default styles */
+@import url("https://unpkg.com/@primo-app/primo@1.3.64/reset.css") layer;
+
+/* Design tokens (apply to components) */
+:root {
+  /* Custom theme options */
+  --color-accent: #20bfa9;
+  --color-accent-2: #ff794d;
+
+  /* Base values */
+  --box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.2);
+  --border-radius: 8px;
+  --border-color: #e1ecf0;
+}
+
+/* Root element (use instead of `body`) */
+#page {
+  font-family: system-ui, sans-serif;
+  color: #1d263a;
+  line-height: 1.2;
+  font-size: 1.125rem;
+  background: white;
+}
+
+/* Elements */
+.section-container {
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 5rem 2rem;
+}
+
+a.link {
+  line-height: 1.3;
+  font-weight: 500;
+  border-bottom: 2px solid;
+  transform: translateY(-2px); /* move link back into place */
+  transition: var(--transition, 0.1s border);
+}
+
+a.link:hover {
+    border-color: transparent;
+  }
+
+.heading {
+  font-size: 2.5rem;
+  line-height: 1.1;
+  font-weight: 600;
+}
+
+.subheading {
+  font-weight: 400;
+  line-height: 1.5;
+  opacity: 90%;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: white;
+  font-weight: 500;
+  background: var(--color-accent, rebeccapurple);
+  border-radius: 3rem;
+  padding: 15px 25px;
+  transition: var(--transition, 0.1s box-shadow);
+  border: 0;
+}
+
+/* reset */
+
+.button:hover {
+    box-shadow: 0 0 0 2px var(--color-accent, rebeccapurple);
+  }
+
+.button.inverted {
+    background: transparent;
+    color: var(--color-accent, rebeccapurple);
+  }
+
+/* Content Section */
+.section .content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 5rem 2rem;
+}
+.section .content p {
+    padding: 0.25rem 0;
+    line-height: 1.5;
+  }
+.section .content img {
+    width: 100%;
+    margin: 2rem 0;
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
+  }
+.section .content a.link {
+  }
+.section .content h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+.section .content h2 {
+    font-size: 2.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+.section .content h3 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+  }
+.section .content ul {
+    list-style: disc;
+    padding: 0.5rem 0;
+    padding-left: 1.25rem;
+  }
+.section .content ol {
+    list-style: decimal;
+    padding: 0.5rem 0;
+    padding-left: 1.25rem;
+  }
+.section .content blockquote {
+    padding: 2rem;
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
+  }
+</style><!-- HEAD_svelte-1vsfxrb_END -->
+      <style>@import url("https://unpkg.com/modern-normalize@1.1.0/modern-normalize.css");header.svelte-6vjs4t.svelte-6vjs4t.svelte-6vjs4t{border-bottom:1px solid var(--border-color)}.section-container.svelte-6vjs4t.svelte-6vjs4t.svelte-6vjs4t{display:flex;justify-content:space-between;align-items:center;padding-top:0.75rem;padding-bottom:0.75rem}.desktop-nav.svelte-6vjs4t.svelte-6vjs4t.svelte-6vjs4t{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;width:100%}.desktop-nav.svelte-6vjs4t .logo.svelte-6vjs4t.svelte-6vjs4t{font-size:1.5rem;font-weight:600;line-height:1.4;margin-right:1.5rem;width:var(--size)}.desktop-nav.svelte-6vjs4t nav.svelte-6vjs4t.svelte-6vjs4t{display:flex;align-items:center;gap:1.5rem}.desktop-nav.svelte-6vjs4t nav.svelte-6vjs4t a.svelte-6vjs4t{font-size:1rem;font-weight:400;display:none}.desktop-nav.svelte-6vjs4t nav a.nav-item.svelte-6vjs4t.svelte-6vjs4t{border-bottom:2px solid transparent;transition:border-color 0.1s}.desktop-nav.svelte-6vjs4t nav a.nav-item.svelte-6vjs4t.svelte-6vjs4t:hover{border-color:var(--color-brand)}.desktop-nav.svelte-6vjs4t button#open.svelte-6vjs4t.svelte-6vjs4t{font-size:1.5rem;margin-left:auto}nav#mobile-nav.svelte-6vjs4t.svelte-6vjs4t.svelte-6vjs4t{position:absolute;flex-direction:column;text-align:center;background-color:var(--background-color, white);box-shadow:var(--box-shadow);border-radius:var(--border-radius);left:0.5rem;top:0.5rem;right:0.5rem;padding:2rem;z-index:2}nav#mobile-nav.svelte-6vjs4t a.svelte-6vjs4t.svelte-6vjs4t{display:block}nav#mobile-nav.svelte-6vjs4t hr.svelte-6vjs4t.svelte-6vjs4t{width:100%}nav#mobile-nav.svelte-6vjs4t .button.svelte-6vjs4t.svelte-6vjs4t{width:100%;justify-content:center}nav#mobile-nav.svelte-6vjs4t button#close.svelte-6vjs4t.svelte-6vjs4t{display:block;position:absolute;right:1rem;top:1rem;font-size:1.5rem}@media(min-width: 600px){#open.svelte-6vjs4t.svelte-6vjs4t.svelte-6vjs4t,#mobile-nav.svelte-6vjs4t.svelte-6vjs4t.svelte-6vjs4t{display:none}.desktop-nav.svelte-6vjs4t nav.svelte-6vjs4t a.svelte-6vjs4t{display:inline-block}}
+.heading.svelte-lt8bm7{text-align:center;margin-bottom:3rem}ul.svelte-lt8bm7{display:grid;grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));place-content:center center;place-items:center center;gap:1.5rem}li.svelte-lt8bm7{padding:1.5rem;border:1px solid var(--border-color);border-radius:var(--border-radius);display:grid;gap:1rem}@media(min-width: 600px){li.svelte-lt8bm7{padding:2rem
+}}.icon.svelte-lt8bm7{font-size:2rem;color:#ff794d}.title.svelte-lt8bm7{font-weight:600;font-size:1.5rem;line-height:1.3}.description.svelte-lt8bm7{line-height:1.75rem}
+section.svelte-9b90c0.svelte-9b90c0{background:#f9fafb}.section-container.svelte-9b90c0.svelte-9b90c0{display:grid;gap:3rem;place-items:center}.heading.svelte-9b90c0.svelte-9b90c0{max-width:1000px;margin:0 auto;text-align:center;max-width:1000px;margin:0 auto}ul.svelte-9b90c0.svelte-9b90c0{display:grid;grid-template-columns:repeat(auto-fill, minmax(300px, 1fr));gap:3rem;row-gap:5rem}ul.svelte-9b90c0 li.svelte-9b90c0{display:grid;gap:0.75rem;background:white;padding:2rem;border:1px solid var(--border-color, #eee);border-radius:var(--border-radius);display:grid}ul.svelte-9b90c0 li img.svelte-9b90c0{border-radius:var(--border-radius);margin-bottom:1.5rem;aspect-ratio:1 / 1;-o-object-fit:cover;object-fit:cover}ul.svelte-9b90c0 li .title.svelte-9b90c0{font-weight:600;font-size:1.5rem;line-height:2rem}ul.svelte-9b90c0 li .description.svelte-9b90c0{font-weight:400;font-size:1rem;line-height:1.5;opacity:0.8}
+.section-container.svelte-gkcc88.svelte-gkcc88{display:grid;gap:3rem}@media(min-width: 600px){.section-container.svelte-gkcc88.svelte-gkcc88{grid-template-columns:1fr 2fr;gap:300px
+}}.main.svelte-gkcc88.svelte-gkcc88{display:grid;place-content:start;gap:2rem}.main.svelte-gkcc88 .company-description.svelte-gkcc88{font-weight:400;font-size:1rem;line-height:1.4rem;opacity:0.8}.links.svelte-gkcc88.svelte-gkcc88{display:flex;flex-wrap:wrap;gap:5rem;justify-content:flex-end}.links.svelte-gkcc88 .item.svelte-gkcc88{display:grid;place-content:start}.links.svelte-gkcc88 .item .label.svelte-gkcc88{font-weight:600;font-size:1.125rem;line-height:1.6rem;opacity:0.6;margin-bottom:1rem}.links.svelte-gkcc88 .item nav.svelte-gkcc88{display:grid;place-items:start;gap:0.75rem}nav.svelte-gkcc88 .link.svelte-gkcc88{border-color:transparent;font-size:1rem}nav.svelte-gkcc88 .link.svelte-gkcc88:hover{border-color:initial}.subfooter.svelte-gkcc88.svelte-gkcc88{border-top:1px solid var(--border-color);padding-block:1rem}.subfooter.svelte-gkcc88 .primo.svelte-gkcc88{display:block;font-weight:600;font-size:0.75rem;text-align:center}.subfooter.svelte-gkcc88 .primo a.svelte-gkcc88{text-decoration:underline;color:rgb(53, 217, 148)}</style>
+    </head>
+    <body id="page">
+       
+<div class="section" id="section-76d7191d"><header class="svelte-6vjs4t"><div class="section-container svelte-6vjs4t"><div class="desktop-nav svelte-6vjs4t"><a href="/" class="logo svelte-6vjs4t" style="--size: 8rem;"><img src="https://ploxnxwnmodzixrdbqht.supabase.co/storage/v1/object/public/images/46d259d2-4b66-4eea-830e-3bef57dc5e85/1694531535264ThetaLegal_RGB_Pos.jpg" alt="Logoipsum"></a>
+      <nav class="svelte-6vjs4t"><a class="nav-item svelte-6vjs4t" href="/products">Produkte</a><a class="nav-item svelte-6vjs4t" href="/about">Über uns</a>
+        <a class="button svelte-6vjs4t" href="/consultation">Kennenlernen</a>
+        <button id="open" aria-label="Open mobile navigation" class="svelte-6vjs4t"></button></nav></div>
+    </div></header></div> 
+<div class="section" id="section-371fae88"><section><div class="section-container"><h2 class="heading svelte-lt8bm7">Vision</h2>
+    <ul class="svelte-lt8bm7"><li class="svelte-lt8bm7"><div class="icon svelte-lt8bm7"></div>
+          <h3 class="title svelte-lt8bm7">"Gründung 2021"</h3>
+          <div class="description svelte-lt8bm7">Gegründet im Jahr 2021 mit einer Hauptaufgabe: der Erforschung sensibler Daten für KI.</div>
+        </li><li class="svelte-lt8bm7"><div class="icon svelte-lt8bm7"></div>
+          <h3 class="title svelte-lt8bm7">"Datenschutz-Meister"</h3>
+          <div class="description svelte-lt8bm7">Wir stehen an der Spitze der neuesten Durchbrüche beim datenschutzschonenden maschinellen Lernen und bei hochmodernen generativen KI-Methoden.</div>
+        </li><li class="svelte-lt8bm7"><div class="icon svelte-lt8bm7"></div>
+          <h3 class="title svelte-lt8bm7">"Volles Potenzial der KI“</h3>
+          <div class="description svelte-lt8bm7">Schöpfen Sie das volle Potenzial der KI aus und gewährleisten Sie gleichzeitig den Datenschutz und die Sicherheit Ihrer sensiblen Daten.</div>
+        </li></ul></div></section></div> 
+<div class="section" id="section-d89f4b4a"><section class="svelte-9b90c0"><div class="section-container svelte-9b90c0"><h2 class="heading svelte-9b90c0">Team</h2>
+    <ul class="svelte-9b90c0"><li class="svelte-9b90c0"><img src="https://ploxnxwnmodzixrdbqht.supabase.co/storage/v1/object/public/images/46d259d2-4b66-4eea-830e-3bef57dc5e85/1695914167231Uwe-modified.jpeg" alt="" class="svelte-9b90c0">
+          <div class="title svelte-9b90c0">Dr. Uwe Stoll  </div>
+          <div>CEO</div>
+          <div class="description svelte-9b90c0"><!-- HTML_TAG_START --><!-- HTML_TAG_END --></div>
+        </li><li class="svelte-9b90c0"><img src="https://ploxnxwnmodzixrdbqht.supabase.co/storage/v1/object/public/images/46d259d2-4b66-4eea-830e-3bef57dc5e85/1695914176178Kyohei-modified.jpg" alt="" class="svelte-9b90c0">
+          <div class="title svelte-9b90c0">Kyohei Hamaguchi </div>
+          <div>Head of Engineering</div>
+          <div class="description svelte-9b90c0"><!-- HTML_TAG_START --><!-- HTML_TAG_END --></div>
+        </li><li class="svelte-9b90c0"><img src="https://ploxnxwnmodzixrdbqht.supabase.co/storage/v1/object/public/images/46d259d2-4b66-4eea-830e-3bef57dc5e85/1693405018377Nate.jpeg" alt="" class="svelte-9b90c0">
+          <div class="title svelte-9b90c0">Nathanael v. d. Berg </div>
+          <div>Head of Operations</div>
+          <div class="description svelte-9b90c0"><!-- HTML_TAG_START --><!-- HTML_TAG_END --></div>
+        </li><li class="svelte-9b90c0"><img src="https://ploxnxwnmodzixrdbqht.supabase.co/storage/v1/object/public/images/46d259d2-4b66-4eea-830e-3bef57dc5e85/1695914185847Pramod-modified.jpeg" alt="" class="svelte-9b90c0">
+          <div class="title svelte-9b90c0">Pramod Vadiraja </div>
+          <div>Senior AI Engineer</div>
+          <div class="description svelte-9b90c0"><!-- HTML_TAG_START --><!-- HTML_TAG_END --></div>
+        </li><li class="svelte-9b90c0"><img src="https://ploxnxwnmodzixrdbqht.supabase.co/storage/v1/object/public/images/46d259d2-4b66-4eea-830e-3bef57dc5e85/1695914193529Akhay-modified.jpeg" alt="" class="svelte-9b90c0">
+          <div class="title svelte-9b90c0">Akshay Joshi</div>
+          <div>Senior AI Engineer</div>
+          <div class="description svelte-9b90c0"><!-- HTML_TAG_START --><!-- HTML_TAG_END --></div>
+        </li><li class="svelte-9b90c0"><img src="https://ploxnxwnmodzixrdbqht.supabase.co/storage/v1/object/public/images/46d259d2-4b66-4eea-830e-3bef57dc5e85/1695914399695Asher.png" alt="" class="svelte-9b90c0">
+          <div class="title svelte-9b90c0">Asher Teo</div>
+          <div>Full Stack Engineer</div>
+          <div class="description svelte-9b90c0"><!-- HTML_TAG_START --><!-- HTML_TAG_END --></div>
+        </li><li class="svelte-9b90c0"><img src="https://ploxnxwnmodzixrdbqht.supabase.co/storage/v1/object/public/images/46d259d2-4b66-4eea-830e-3bef57dc5e85/1695914416540Nanda.jpg" alt="" class="svelte-9b90c0">
+          <div class="title svelte-9b90c0">Nanda Anand</div>
+          <div> Full Stack Engineer</div>
+          <div class="description svelte-9b90c0"><!-- HTML_TAG_START --><!-- HTML_TAG_END --></div>
+        </li><li class="svelte-9b90c0"><img src="https://ploxnxwnmodzixrdbqht.supabase.co/storage/v1/object/public/images/46d259d2-4b66-4eea-830e-3bef57dc5e85/1695914200690Fatima-modified.jpeg" alt="" class="svelte-9b90c0">
+          <div class="title svelte-9b90c0">Fatima Kozhamkulova</div>
+          <div>Marketing &amp; Biz Dev</div>
+          <div class="description svelte-9b90c0"><!-- HTML_TAG_START --><!-- HTML_TAG_END --></div>
+        </li><li class="svelte-9b90c0"><img src="https://ploxnxwnmodzixrdbqht.supabase.co/storage/v1/object/public/images/46d259d2-4b66-4eea-830e-3bef57dc5e85/1695914205922Mateo-modified.jpeg" alt="" class="svelte-9b90c0">
+          <div class="title svelte-9b90c0">Mateo Monot  </div>
+          <div>UI/UX Designer</div>
+          <div class="description svelte-9b90c0"><!-- HTML_TAG_START --><!-- HTML_TAG_END --></div>
+        </li></ul></div></section></div> 
+<div class="section" id="section-93a187a6"><footer class="section-container svelte-gkcc88"><div class="main svelte-gkcc88"><a href="/" class="logo"><img src="https://ploxnxwnmodzixrdbqht.supabase.co/storage/v1/object/public/images/46d259d2-4b66-4eea-830e-3bef57dc5e85/1694531535264ThetaLegal_RGB_Pos.jpg" alt=""></a>
+    <div class="company-description svelte-gkcc88"><!-- HTML_TAG_START --><p>Generatives KI für Anwälte</p><!-- HTML_TAG_END --></div></div>
+  <div class="links svelte-gkcc88"><div class="item svelte-gkcc88"><h4 class="label svelte-gkcc88">Um</h4>
+        <nav class="svelte-gkcc88"><a class="link svelte-gkcc88" href="/">Unsere Werte</a><a class="link svelte-gkcc88" href="/">Unser Team</a></nav>
+      </div><div class="item svelte-gkcc88"><h4 class="label svelte-gkcc88">Andere Ressourcen</h4>
+        <nav class="svelte-gkcc88"><a class="link svelte-gkcc88" href="/">Impressum</a><a class="link svelte-gkcc88" href="/">Datenschutzrichtlinie</a></nav>
+      </div></div></footer>
+<div class="subfooter svelte-gkcc88"><span class="primo svelte-gkcc88"><a href="https://primo.so" class="svelte-gkcc88">Primo</a> Powered </span></div></div> 
+
+      <script type="module">
+      import('/_symbols/b04ddece-b289-4048-a531-9aeae9cafb9f.js')
+      .then(({default:App}) => {
+        
+            new App({
+              target: document.querySelector('#section-76d7191d'),
+              hydrate: true,
+              props: {"logo":{"size":"8","image":{"alt":"Logoipsum","src":"https://ploxnxwnmodzixrdbqht.supabase.co/storage/v1/object/public/images/46d259d2-4b66-4eea-830e-3bef57dc5e85/1694531535264ThetaLegal_RGB_Pos.jpg","url":"https://ploxnxwnmodzixrdbqht.supabase.co/storage/v1/object/public/images/46d259d2-4b66-4eea-830e-3bef57dc5e85/1694531535264ThetaLegal_RGB_Pos.jpg","size":122}},"site_nav":[{"link":{"url":"/products","label":"Products"}},{"link":{"url":"/about","label":"About"}}],"cta":[{"link":{"url":"/consultation","label":"Book a call"}}]}
+            })
+          
+      })
+      .catch(e => console.error(e))
+    
+
+      import('/_symbols/88c95a58-d334-492f-b7f0-882f204856bb.js')
+      .then(({default:App}) => {
+        
+            new App({
+              target: document.querySelector('#section-371fae88'),
+              hydrate: true,
+              props: {"heading":"Occaecat sint culpa","icon_list":[{"icon":"carbon:calculation-alt","title":"Easy Calculation","description":"Lorem ipsum dolor sit amet, consec tetur adipiscing elit. Enim augue a ut sit sollicitudin. Curabitur vitae sit mauris amet, lobortis in lorem."},{"icon":"fluent:money-hand-24-filled","title":"Save Extra Money","description":"Lorem ipsum dolor sit amet, consec tetur adipiscing elit. Enim augue a ut sit sollicitudin. Curabitur vitae sit mauris amet, lobortis in lorem."},{"icon":"ant-design:stock-outlined","title":"Detailed Report","description":"Lorem ipsum dolor sit amet, consec tetur adipiscing elit. Enim augue a ut sit sollicitudin. Curabitur vitae sit mauris amet, lobortis in lorem."}]}
+            })
+          
+      })
+      .catch(e => console.error(e))
+    
+
+      import('/_symbols/5c15befd-8726-4482-a5b2-38e0062b168b.js')
+      .then(({default:App}) => {
+        
+            new App({
+              target: document.querySelector('#section-93a187a6'),
+              hydrate: true,
+              props: {"logo":{"image":{"alt":"","src":"https://picsum.photos/600/400?blur=10","url":"https://picsum.photos/600/400?blur=10","size":null},"title":"Anim enim eu"},"footer_links":[],"company_description":{"html":"","markdown":""}}
+            })
+          
+      })
+      .catch(e => console.error(e))
+    </script>
+    </body>
+  </html>
+  
